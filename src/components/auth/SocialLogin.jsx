@@ -1,6 +1,6 @@
 import React from "react";
-import googleIcon from "../assets/images/google.png";
-import githubIcon from "../assets/images/github.png";
+import googleIcon from "../../assets/images/google.png";
+import githubIcon from "../../assets/images/github.png";
 
 const SocialLogin = () => {
   return (

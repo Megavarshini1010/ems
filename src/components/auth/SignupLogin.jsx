@@ -96,10 +96,8 @@ const SignupForm = () => {
           Sign Up
         </button>
 
-        <SocialLogin />
-
         {/* Login Link */}
-        <p className="text-center mt-4 mb-0">
+        <p className="text-center mt-0 mb-0">
           Already have an account?{" "}
           <Link to="/login" className="fw-semibold">
             Login
