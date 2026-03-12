@@ -9,75 +9,81 @@
   --transition: all 0.3s ease;
 }
 
-/* Global Button Overrides */
-.btn-primary {
-  background-color: var(--primary) !important;
-  border-color: var(--primary) !important;
-  transition: var(--transition);
+
+/* ZEBRA TABLE */
+
+.table-orange-zebra thead{
+  background:#7C2D12;
+  color:white;
 }
 
-.btn-primary:hover {
-  background-color: var(--primary-hover) !important;
+.table-orange-zebra tbody tr:nth-child(odd){
+  background:#FFF7ED;
 }
 
-.btn-warning {
-  background-color: var(--secondary) !important;
-  border-color: var(--secondary) !important;
-  color: white !important;
+.table-orange-zebra tbody tr:nth-child(even){
+  background:#FED7AA;
 }
 
-/* Animation Classes */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.table-orange-zebra tbody tr:hover{
+  background:#FDBA74;
+  transition:0.2s;
 }
 
-.animate-fade {
-  animation: fadeIn 0.5s ease forwards;
+
+/* SEARCH INPUT */
+
+.search-input{
+border:1px solid #F97316;
 }
 
-/* Custom Table Header */
-.custom-table-head {
-  background-color: var(--light-bg) !important;
-  color: var(--sidebar-dark);
+.search-input:focus{
+border-color:#EA580C;
+box-shadow:0 0 5px rgba(249,115,22,0.4);
 }
 
-.table-hover tbody tr:hover {
-  background-color: var(--light-bg) !important;
-}
-/* Orange Glow Shadow for the main card */
-.orange-shadow-card {
-  background: white;
-  border-radius: 15px;
-  border: none;
-  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15); /* Soft orange glow */
+
+/* ROW SELECT */
+
+.rows-select{
+border:1px solid #F97316;
 }
 
-/* Zebra Striping: Row 1 Lite Orange, Row 2 White/Darker */
-.table-orange-zebra tbody tr:nth-child(odd) {
-  background-color: #FFF7ED !important; /* Row 1: Lite Orange */
+.rows-select:hover{
+border-color:#EA580C;
 }
 
-.table-orange-zebra tbody tr:nth-child(even) {
-  background-color: #FED7AA !important; /* Row 2: Slightly Darker Orange */
+
+/* PAGINATION */
+
+.pagination-orange .page-link{
+color:#F97316;
+border:1px solid #FED7AA;
 }
 
-/* Ensure table text remains dark and readable */
-.table-orange-zebra td {
-  color: var(--text-dark);
-  border: none;
+.pagination-orange .page-link:hover{
+background:#FFF7ED;
+color:#EA580C;
 }
 
-/* Table Header Style */
-.table-orange-zebra thead {
-  background-color: var(--sidebar-dark) !important;
-  color: white;
-}
-.border-orange {
-  border: 2px solid #F97316 !important;
+.pagination-orange .page-item.active .page-link{
+background:#F97316;
+border-color:#F97316;
+color:white;
 }
 
-.border-orange:focus {
-  border-color: #FB923C !important;
-  box-shadow: 0 0 8px rgba(249,115,22,0.3);
+.pagination-orange .page-item.disabled .page-link{
+color:#ccc;
+}
+
+
+/* BUTTON STYLE */
+
+.btn-primary{
+background:#F97316 !important;
+border-color:#F97316 !important;
+}
+
+.btn-primary:hover{
+background:#EA580C !important;
 }

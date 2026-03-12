@@ -12,7 +12,7 @@ function AppRoute() {
         <Route path="/login" element={<Login />} />
          <Route path="/signup" element={<Signup />} /> 
         <Route path="/dashboard" element={<Dashboard />} /> 
-<Route path="/employees" element={<EmployeeList />} />
+      <Route path="/employees" element={<EmployeeList />} />
       </Routes>
     </BrowserRouter>
   );
