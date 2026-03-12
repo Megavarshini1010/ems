@@ -1,0 +1,40 @@
+.dashboard-bg {
+  background: #FFF7ED;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.dashboard-card {
+  width: 280px;
+  padding: 25px;
+  border-radius: 18px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 25px rgba(249,115,22,0.1);
+  transition: all 0.35s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(249,115,22,0.2);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: #F97316;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 26px;
+}
+
+.count-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #7C2D12;
+}

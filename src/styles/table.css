@@ -1,0 +1,83 @@
+:root {
+  --primary: #F97316;
+  --primary-hover: #EA580C;
+  --secondary: #FB923C;
+  --light-bg: #FFF7ED;
+  --sidebar-dark: #7C2D12;
+  --border-light: #FED7AA;
+  --text-dark: #1F2937;
+  --transition: all 0.3s ease;
+}
+
+/* Global Button Overrides */
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.btn-warning {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: white !important;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Custom Table Header */
+.custom-table-head {
+  background-color: var(--light-bg) !important;
+  color: var(--sidebar-dark);
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--light-bg) !important;
+}
+/* Orange Glow Shadow for the main card */
+.orange-shadow-card {
+  background: white;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15); /* Soft orange glow */
+}
+
+/* Zebra Striping: Row 1 Lite Orange, Row 2 White/Darker */
+.table-orange-zebra tbody tr:nth-child(odd) {
+  background-color: #FFF7ED !important; /* Row 1: Lite Orange */
+}
+
+.table-orange-zebra tbody tr:nth-child(even) {
+  background-color: #FED7AA !important; /* Row 2: Slightly Darker Orange */
+}
+
+/* Ensure table text remains dark and readable */
+.table-orange-zebra td {
+  color: var(--text-dark);
+  border: none;
+}
+
+/* Table Header Style */
+.table-orange-zebra thead {
+  background-color: var(--sidebar-dark) !important;
+  color: white;
+}
+.border-orange {
+  border: 2px solid #F97316 !important;
+}
+
+.border-orange:focus {
+  border-color: #FB923C !important;
+  box-shadow: 0 0 8px rgba(249,115,22,0.3);
+}

@@ -1,66 +1,40 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Navbar = ({ toggleSidebar }) => {
-
   const [showProfile, setShowProfile] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    toast.info("Signed out successfully");
+    navigate("/login");
+  };
 
   return (
-    <>
-      <nav className="navbar navbar-light bg-white px-3 shadow-sm">
+    <nav className="navbar navbar-light bg-white shadow-sm px-3">
+      <button className="btn btn-outline-secondary" onClick={toggleSidebar}>
+        ☰
+      </button>
 
-        {/* Hamburger */}
-        <button
-          className="btn btn-outline-secondary"
-          onClick={toggleSidebar}
-        >
-          ☰
-        </button>
+      <div className="ms-auto position-relative">
+        <span style={{ cursor: "pointer" }} onClick={() => setShowProfile(!showProfile)}>
+          <i className="bi bi-person-circle fs-4"></i>
+          <span className="ms-2">Profile</span>
+        </span>
 
-        {/* Profile Icon */}
-        <div className="ms-auto">
-
-          <i
-            className="bi bi-person-circle fs-4"
-            style={{ cursor: "pointer" }}
-            onClick={() => setShowProfile(true)}
-          ></i>
-
-        </div>
-
-      </nav>
-
-      {/* Profile Modal */}
-      {showProfile && (
-        <div className="modal show d-block">
-          <div className="modal-dialog modal-dialog-centered">
-
-            <div className="modal-content">
-
-              <div className="modal-header">
-                <h5 className="modal-title">User Profile</h5>
-
-                <button
-                  className="btn-close"
-                  onClick={() => setShowProfile(false)}
-                ></button>
-              </div>
-
-              <div className="modal-body text-center">
-
-                <i className="bi bi-person-circle fs-1 mb-3"></i>
-
-                <h5>Admin User</h5>
-                <p>admin@gmail.com</p>
-
-              </div>
-
-            </div>
-
+        {showProfile && (
+          <div className="dropdown-menu show" style={{ right: 0, left: "auto" }}>
+            <span className="dropdown-item fw-bold">Admin</span>
+            <span className="dropdown-item text-muted small">admin@gmail.com</span>
+            <div className="dropdown-divider"></div>
+            <button className="dropdown-item text-danger" onClick={handleSignOut}>
+              Sign Out
+            </button>
           </div>
-        </div>
-      )}
-
-    </>
+        )}
+      </div>
+    </nav>
   );
 };
 
