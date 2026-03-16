@@ -16,7 +16,7 @@ const AuthLayout = ({ children }) => {
 
         {/* Right Side: Form */}
         <div className="col-md-6 d-flex align-items-center justify-content-center bg-light">
-          <div className="w-75">
+          <div className="form-container">
             {children}
           </div>
         </div>

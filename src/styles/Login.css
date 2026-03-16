@@ -1,15 +1,29 @@
 /* 🧊 Glassmorphism Form Container */
+.form-container{
+  max-width:350px;
+  width:100%;
+  margin:auto;
+}
 .glass-form-card {
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5); 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 10px 30px rgba(124, 45, 18, 0.08);
   animation: slideInUp 0.6s ease-out;
 }
-
+.glass-form-card h2{
+font-size:22px;
+}
+.login-wrapper{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background: #FFF7ED;
+}
 @keyframes slideInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -23,13 +37,14 @@
 
 .styled-input {
   width: 100%;
-  padding: 14px 16px;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.8);
-  border: 2px solid #FED7AA; /* Light Orange Border */
+  border: 2px solid #FED7AA; 
   border-radius: 12px;
   outline: none;
   transition: all 0.3s ease;
-  font-size: 16px;
+  font-size: 14px;
+  height:48px;
 }
 
 .floating-label {
@@ -37,10 +52,10 @@
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  color: #7C2D12; /* Darker Orange */
+  color: #7C2D12; 
   transition: all 0.3s ease;
   pointer-events: none;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 /* Float logic */
@@ -48,7 +63,7 @@
 .styled-input:not(:placeholder-shown) + .floating-label {
   top: 0;
   font-size: 12px;
-  color: #F97316; /* Primary Orange */
+  color: #F97316;
   background: white;
   padding: 0 6px;
   border-radius: 4px;
@@ -59,10 +74,10 @@
   box-shadow: 0 0 12px rgba(249, 115, 22, 0.2);
 }
 
-/* ✨ Orange Glow Button */
+/* Orange Glow Button */
 .glow-button {
   width: 100%;
-  padding: 14px;
+  padding: 10px;
   background: #F97316;
   color: white;
   border: none;
@@ -72,6 +87,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
   margin-top: 10px;
+  font-size:13px;
 }
 
 .glow-button:hover {
@@ -88,6 +104,29 @@
 
 .auth-link:hover {
   text-decoration: underline;
+}
+.password-field{
+position:relative;
+}
+
+.password-toggle{
+position:absolute;
+right:14px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+font-size:18px;
+color:#7C2D12;
+z-index:3;
+}
+.password-field input{
+padding-right:42px;
+}
+
+.forgot-link{
+  color:#f97316;
+  cursor:pointer;
+  font-size:13px;
 }
 /* ➖ Divider Logic */
 .divider-container {
@@ -128,7 +167,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 10px;
+  padding: 8px;
   border: 2px solid #FED7AA;
   border-radius: 12px;
   background: white;
@@ -136,7 +175,7 @@
   cursor: pointer;
   font-weight: 600;
   color: #1F2937;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .social-btn:hover {
@@ -150,5 +189,5 @@
 }
 
 /* Specific colors for icons */
-.bi-google { color: #DB4437; }
+.bi-google { color: #dba737; }
 .bi-github { color: #333; }

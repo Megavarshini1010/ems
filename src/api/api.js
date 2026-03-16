@@ -1,6 +1,5 @@
-export const BASE_URL = "https://jsonplaceholder.typicode.com";
+export const BASE_URL = "https://njnxpst2-8081.inc1.devtunnels.ms";
 
-export const ENDPOINTS = {
-  users: `${BASE_URL}/users`,
-  posts: `${BASE_URL}/posts`,
+export const API_ENDPOINTS = {
+ LOGIN: `api/auth/login`,
 };

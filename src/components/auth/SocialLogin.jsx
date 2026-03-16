@@ -8,9 +8,7 @@ const SocialLogin = () => {
       <div className="text-center my-3">
         <span className="text-muted">or continue with</span>
       </div>
-
-      <div className="d-grid gap-2">
-        {/* Explicitly setting type="button" prevents form submission */}
+<div className="d-grid gap-2">
         <button 
           type="button" 
           className="btn btn-outline-danger d-flex align-items-center justify-content-center gap-2 rounded-3"
@@ -18,8 +16,7 @@ const SocialLogin = () => {
           <img src={googleIcon} alt="Google" width="20" height="20" />
           Google
         </button>
-
-        <button 
+   <button 
           type="button" 
           className="btn btn-outline-dark d-flex align-items-center justify-content-center gap-2 rounded-3"
         >
